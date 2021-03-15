@@ -1,0 +1,133 @@
+/* slick部分 */
+.p-top-slickContainer {
+  overflow: hidden;
+  margin-bottom: 60px;
+  padding-top: 60px;
+  
+  @include mq("u-sp") {
+    padding-top: 40px;
+  }
+
+  @include mq("u-sp") {
+    margin-bottom: 45px;
+  }
+}
+
+.p-top-slickList__item__inner {
+  @include mq("o-sp") {
+    margin-right: 50px;
+  }
+}
+
+.p-top-wears__new {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.p-top-wears__new__ttl {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba($colorGray, .3);
+}
+
+// ブランド部分はここから
+.p-top-brand {
+  width: 100%;
+  padding: 50px 0;
+  background: rgb(48,214,214);
+  background: linear-gradient(135deg, rgba(48,214,214,1) 0%, rgba(112,105,204,1) 50%, rgba(250,184,198,1) 100%);
+  transform: translateY(0);
+
+  @include mq("u-sp") {
+    padding: 35px 10px;
+  }
+}
+
+.p-top-brand__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.p-top-brand__ttl {
+  margin-bottom: 20px;
+  border-bottom: 1px solid $colorWhite;
+}
+
+.p-top-brandList {
+  display: flex;
+  justify-content: center;
+
+  @include mq("u-sp") {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 10px 10px;
+    flex-wrap: wrap;
+  }
+}
+
+.p-top-brandList__item {
+  padding: 40px 10px;
+  background-color: $colorWhite;
+  border-radius: 5px;
+  color: $colorDarkGray;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  
+  @include mq("o-sp") {
+    width: calc((100% - (20px * 3)) / 4);
+  }
+  
+  &:not(:nth-child(4n)) {
+    @include mq("o-sp") {
+      margin-right: 10px;
+    }
+  }
+  
+  &:nth-last-child(n+5) {
+    @include mq("o-sp") {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include mq("u-sp") {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+.p-top-circle--gift {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 150px;
+  
+  transform: translateX(100%) rotate(90deg);
+  transition: all .5s;
+
+  &.is-show {
+    left: 89%;
+    transform: rotate(0);
+
+    @include mq("u-sp") {
+      left: 50%;
+    }
+  }
+
+  @include mq("u-sp") {
+    bottom: 15px;
+  }
+}
+
+[data-fadeIn] {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: transform 1.6s;
+
+  &.is-show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s linear;
+  }
+}

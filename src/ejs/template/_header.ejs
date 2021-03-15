@@ -1,0 +1,40 @@
+<%
+  var imgPath = "/assets/images/",
+      navItem = ["MEN", "WOMAN", "KIDS"],
+      category = ["men", "woman", "kids"];
+%>
+<header class="l-header">
+  <div class="l-header-inner c-inner">
+    <h1 class="c-header-logo">
+      <a href="/index.html">
+        <img src="<%= imgPath %>logo_black.png" alt="logo">
+      </a>
+    </h1>
+    <div class="c-header-links jsc-elem-slideIn">
+      <nav class="c-header-linksMenu">
+        <% for (var i = 0; i < navItem.length; i++) { %>
+          <a href="/list/index.html?category=<%= category[i] %>" class="c-header-linksMenu__item"><%= navItem[i] %></a>
+        <% } %>
+      </nav>
+      <!-- カート -->
+      <div class="c-header-links__controls">
+        <a href="#" class="c-header-links__controls__cart jsi-elem-trigger-strage">
+          <img src="<%= imgPath %>icon_cart_black.svg" alt="cart">
+          <!-- カートに追加された分だけの数値を代入 -->
+          <span class="c-header-links__controls__cart--batch jsc-elem-batch"></span>
+        </a>
+      </div><!-- /.c-header-links__controls -->
+    </div><!-- /.c-header-links -->
+    <!-- スマホレイアウト時、header内に収まるようformタグを分けている -->
+    <form action="/list/index.html" autocomplete="off" method="GET"><!-- autocomplete="off"は予測変換機能を無効化 -->
+      <!-- 虫眼鏡 -->
+      <button type="submit" class="c-header-wordSubmit"></button>
+      <input class="c-header-txtSearch" type="text" name="freeWord" placeholder="何かお探しですか？" data-item-freeword="">
+    </form>
+    <a href="#" class="c-header-menuTrigger u-hidden-pc jsc-elem-trigger">
+      <span class="c-header-menuTrigger__line jsc-elem-change"></span>
+      <span class="c-header-menuTrigger__line jsc-elem-change"></span>
+      <span class="c-header-menuTrigger__line jsc-elem-change"></span>
+    </a>
+  </div><!-- /.l-header-inner -->
+</header>

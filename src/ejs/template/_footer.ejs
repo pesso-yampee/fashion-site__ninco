@@ -1,0 +1,31 @@
+<% var imgPath = "/assets/images/"; %>
+<% var sns = ["Facebook", "TWITTER", "INSTAGRAM"]; %>
+<% var menuItem = ["ヘルプ", "お問い合わせ", "利用規約", "採用情報", "© NINCO Co., Ltd."]; %>
+<footer class="l-footer">
+  <div class="c-footer-sns">
+    <h1 class="c-footer-sns__heading">NINCO</h1>
+    <ul class="c-footer-snsList">
+    <% for (var i = 0; i < sns.length; i++) { %>
+      <li class="c-footer-snsList__item">
+        <a href="#">
+          <img class="c-footer-snsList__item__logo" src="<%= imgPath %><%= sns[i] %>.png" alt="sns icon">
+          <p class="c-footer-snsList__item__txt"><%= sns[i] %></p>
+        </a>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+  <div class="c-footer-container">
+    <ul class="c-footerList">
+    <% for (var i = 0; i < menuItem.length; i++) { %>
+      <% if (i === 4) { %>
+      <li class="c-footerList__item"><a href="#"><small><%= menuItem[i] %></small></a></li>
+      <% } else { %>
+      <li class="c-footerList__item"><a href="#"><%= menuItem[i] %></a></li>
+      <% }%>
+    <% } %>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

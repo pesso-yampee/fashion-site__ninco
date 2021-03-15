@@ -1,0 +1,52 @@
+<% var title = "鳳凰の間 ECサイト 詳細ページ"; var description = "鳳凰の間 ECサイト 詳細ページのdescription"; %>
+<% include src/ejs/template/_head %>
+<% include src/ejs/template/_header %>
+<% var size = ["130", "140", "150", "160", "170", "180", "190"]; %>
+<% var review = ["1", "2", "3", "4", "5"]; %>
+<main class="contents" id="page_detail">
+  <div class="p-detail">
+    <div class="p-detail-cont c-block c-inner jsi-elem-detail" data-item-id="">
+      <div class="p-detail-main">
+        <img class="p-detail-main__img " src="" alt="詳細画像" data-zoom-image="" id="zoom-image">
+        <p class="p-detail-main__mouseNote">画像にマウスを合わせると拡大します</p>
+      </div><!-- /.p-detail-main -->
+      <div class="p-detail-info">
+        <div class="new-label">New</div>
+        <h2 class="p-detail-name" data-item-parts="name">ジャケット</h2>
+        <div class="p-detail-brand">
+          <div class="p-detail-brand__label">BRAND : <span class="p-detail-brand__name" data-item-parts="brand">AAA</span></div>
+        </div><!-- ./p-detail-brand -->
+        <div class="p-detail-size">
+          <div class="p-detail-size__select">Select Size : <span class="jsc-elem-size" data-item-parts="size">130</span></div>
+          <ul class="p-detail-size__list">
+            <% for (var i = 0; i < size.length; i++) { %>
+              <li class="p-detail-size__list__item jsc-elem-select"><%= size[i] %></li>
+              <% } %>
+          </ul>
+        </div><!-- /.p-detail-size -->
+        <p class="p-detail-price">¥<span data-item-parts="price">1800</span></p>
+        <div class="p-detail-cartBtn jsc-btn-addCart">カートに追加する</div>
+        <div class="p-detail-favBtn jsc-btn-addFav">お気に入りに入れる</div>
+        <div class="p-detail-explain">
+          <p class="p-detail-explain__trigger jsc-elem-show">商品の説明を見る</p>
+          <p class="p-detail-explain__txt jsc-elem-slideDown" data-item-parts="text"></p>
+        </div><!-- /.p-detail-explain -->
+      </div><!-- /.p-detail-info -->
+    </div><!-- /.p-detail-cont c-block -->
+    <!-- レビュー -->
+    <div class="c-inner">
+      <section class="p-detail-review c-block">
+        <h1 class="p-detail-review__ttl c-blockHeading__ttl">レビューをする</h1>
+        <ul class="p-detail-reviewList">
+          <% for (var i = 0; i < review.length; i++) { %>
+            <li class="p-detail-reviewList__item jsc-elem-review"></li>
+          <% } %>
+        </ul>
+      </section>
+      <% include src/ejs/template/_pickup %>
+      <% include src/ejs/template/_favorite %>
+    </div><!-- /.c-inner -->
+  </div><!-- /.p-detail -->
+</main>
+<% include src/ejs/template/_footer %>
+<% include src/ejs/template/_modal %>

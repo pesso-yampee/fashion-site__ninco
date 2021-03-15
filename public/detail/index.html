@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="鳳凰の間 ECサイト 詳細ページのdescription" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="./assets/images/fav.png" />
+<!--facebook用-->
+<meta property="og:title" content="鳳凰の間 ECサイト 詳細ページ" />
+<meta property="og:description" content="鳳凰の間 ECサイト 詳細ページのdescription" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" /><!--絶対パスで記述-->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="鳳凰の間 ECサイト 詳細ページ" />
+<meta property="og:locale" content="ja_JP" />
+<!--twitter用-->
+<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
+<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
+<meta name="twitter:title" content="鳳凰の間 ECサイト 詳細ページ" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:description" content="鳳凰の間 ECサイト 詳細ページのdescription" />
+<meta name="twitter:image" content="" /><!--絶対パスで記述-->
+
+<title>鳳凰の間 ECサイト 詳細ページ</title>
+<link href="../assets/stylesheets/bundle2134c1893e9537d5992d.css" rel="stylesheet"></head>
+<body>
+
+<header class="l-header">
+  <div class="l-header-inner c-inner">
+    <h1 class="c-header-logo">
+      <a href="/index.html">
+        <img src="/assets/images/logo_black.png" alt="logo">
+      </a>
+    </h1>
+    <div class="c-header-links jsc-elem-slideIn">
+      <nav class="c-header-linksMenu">
+        
+          <a href="/list/index.html?category=men" class="c-header-linksMenu__item">MEN</a>
+        
+          <a href="/list/index.html?category=woman" class="c-header-linksMenu__item">WOMAN</a>
+        
+          <a href="/list/index.html?category=kids" class="c-header-linksMenu__item">KIDS</a>
+        
+      </nav>
+      <!-- カート -->
+      <div class="c-header-links__controls">
+        <a href="#" class="c-header-links__controls__cart jsi-elem-trigger-strage">
+          <img src="/assets/images/icon_cart_black.svg" alt="cart">
+          <!-- カートに追加された分だけの数値を代入 -->
+          <span class="c-header-links__controls__cart--batch jsc-elem-batch"></span>
+        </a>
+      </div><!-- /.c-header-links__controls -->
+    </div><!-- /.c-header-links -->
+    <!-- スマホレイアウト時、header内に収まるようformタグを分けている -->
+    <form action="/list/index.html" autocomplete="off" method="GET"><!-- autocomplete="off"は予測変換機能を無効化 -->
+      <!-- 虫眼鏡 -->
+      <button type="submit" class="c-header-wordSubmit"></button>
+      <input class="c-header-txtSearch" type="text" name="freeWord" placeholder="何かお探しですか？" data-item-freeword="">
+    </form>
+    <a href="#" class="c-header-menuTrigger u-hidden-pc jsc-elem-trigger">
+      <span class="c-header-menuTrigger__line jsc-elem-change"></span>
+      <span class="c-header-menuTrigger__line jsc-elem-change"></span>
+      <span class="c-header-menuTrigger__line jsc-elem-change"></span>
+    </a>
+  </div><!-- /.l-header-inner -->
+</header>
+
+
+<main class="contents" id="page_detail">
+  <div class="p-detail">
+    <div class="p-detail-cont c-block c-inner jsi-elem-detail" data-item-id="">
+      <div class="p-detail-main">
+        <img class="p-detail-main__img " src="" alt="詳細画像" data-zoom-image="" id="zoom-image">
+        <p class="p-detail-main__mouseNote">画像にマウスを合わせると拡大します</p>
+      </div><!-- /.p-detail-main -->
+      <div class="p-detail-info">
+        <div class="new-label">New</div>
+        <h2 class="p-detail-name" data-item-parts="name">ジャケット</h2>
+        <div class="p-detail-brand">
+          <div class="p-detail-brand__label">BRAND : <span class="p-detail-brand__name" data-item-parts="brand">AAA</span></div>
+        </div><!-- ./p-detail-brand -->
+        <div class="p-detail-size">
+          <div class="p-detail-size__select">Select Size : <span class="jsc-elem-size" data-item-parts="size">130</span></div>
+          <ul class="p-detail-size__list">
+            
+              <li class="p-detail-size__list__item jsc-elem-select">130</li>
+              
+              <li class="p-detail-size__list__item jsc-elem-select">140</li>
+              
+              <li class="p-detail-size__list__item jsc-elem-select">150</li>
+              
+              <li class="p-detail-size__list__item jsc-elem-select">160</li>
+              
+              <li class="p-detail-size__list__item jsc-elem-select">170</li>
+              
+              <li class="p-detail-size__list__item jsc-elem-select">180</li>
+              
+              <li class="p-detail-size__list__item jsc-elem-select">190</li>
+              
+          </ul>
+        </div><!-- /.p-detail-size -->
+        <p class="p-detail-price">¥<span data-item-parts="price">1800</span></p>
+        <div class="p-detail-cartBtn jsc-btn-addCart">カートに追加する</div>
+        <div class="p-detail-favBtn jsc-btn-addFav">お気に入りに入れる</div>
+        <div class="p-detail-explain">
+          <p class="p-detail-explain__trigger jsc-elem-show">商品の説明を見る</p>
+          <p class="p-detail-explain__txt jsc-elem-slideDown" data-item-parts="text"></p>
+        </div><!-- /.p-detail-explain -->
+      </div><!-- /.p-detail-info -->
+    </div><!-- /.p-detail-cont c-block -->
+    <!-- レビュー -->
+    <div class="c-inner">
+      <section class="p-detail-review c-block">
+        <h1 class="p-detail-review__ttl c-blockHeading__ttl">レビューをする</h1>
+        <ul class="p-detail-reviewList">
+          
+            <li class="p-detail-reviewList__item jsc-elem-review"></li>
+          
+            <li class="p-detail-reviewList__item jsc-elem-review"></li>
+          
+            <li class="p-detail-reviewList__item jsc-elem-review"></li>
+          
+            <li class="p-detail-reviewList__item jsc-elem-review"></li>
+          
+            <li class="p-detail-reviewList__item jsc-elem-review"></li>
+          
+        </ul>
+      </section>
+      <section class="c-pickup c-block" data-fadeIn="fadeIn">
+  <h1 class="c-pickup__ttl c-blockHeading__ttl">PICK UP</h1>
+  <ul class="c-pickupList c-blockList" data-item-list="pickup">
+  </ul>
+</section>
+
+      <section class="c-favorite c-block">
+  <div class="c-inner">
+    <h1 class="c-favorite__ttl c-blockHeading__ttl">お気に入りしたアイテム♡</h1>
+    <ul class="c-favoriteList c-blockList jsc-fav-addListItem" data-item-list="fav">
+    </ul>
+  </div>
+</section>
+    </div><!-- /.c-inner -->
+  </div><!-- /.p-detail -->
+</main>
+
+
+
+<footer class="l-footer">
+  <div class="c-footer-sns">
+    <h1 class="c-footer-sns__heading">NINCO</h1>
+    <ul class="c-footer-snsList">
+    
+      <li class="c-footer-snsList__item">
+        <a href="#">
+          <img class="c-footer-snsList__item__logo" src="/assets/images/Facebook.png" alt="sns icon">
+          <p class="c-footer-snsList__item__txt">Facebook</p>
+        </a>
+      </li>
+    
+      <li class="c-footer-snsList__item">
+        <a href="#">
+          <img class="c-footer-snsList__item__logo" src="/assets/images/TWITTER.png" alt="sns icon">
+          <p class="c-footer-snsList__item__txt">TWITTER</p>
+        </a>
+      </li>
+    
+      <li class="c-footer-snsList__item">
+        <a href="#">
+          <img class="c-footer-snsList__item__logo" src="/assets/images/INSTAGRAM.png" alt="sns icon">
+          <p class="c-footer-snsList__item__txt">INSTAGRAM</p>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="c-footer-container">
+    <ul class="c-footerList">
+    
+      
+      <li class="c-footerList__item"><a href="#">ヘルプ</a></li>
+      
+    
+      
+      <li class="c-footerList__item"><a href="#">お問い合わせ</a></li>
+      
+    
+      
+      <li class="c-footerList__item"><a href="#">利用規約</a></li>
+      
+    
+      
+      <li class="c-footerList__item"><a href="#">採用情報</a></li>
+      
+    
+      
+      <li class="c-footerList__item"><a href="#"><small>© NINCO Co., Ltd.</small></a></li>
+      
+    
+    </ul>
+  </div>
+</footer>
+<script type="text/javascript" src="../assets/javascripts/bundle2134c1893e9537d5992d.js"></script></body>
+</html>
+<div class="c-modal jsc-elem-fadeToggle">
+  <div class="c-modal-inner">
+    <div class="c-modal-close jsi-elem-close">×</div>
+    <h1 class="c-modal-ttl">ショッピングカート(<span class="c-modal-ttl--total" data-total-num="number"></span>点)</h1>
+    <ul class="c-modalList c-blockList" id="cart-list">
+    </ul>
+    <p class="c-modal-cartTotal">合計金額：<span class="c-modal-cartTotal__price" data-total-num="price"></span>円</p>
+    <a class="c-modal-btn--buy jsi-btn-buy">購入する</a>
+  </div>
+</div>

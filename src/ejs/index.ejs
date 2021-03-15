@@ -1,0 +1,60 @@
+<% var title = "鳳凰の間 ECサイト"; var description = "鳳凰の間 ECサイトのdescription"; %> <% include
+src/ejs/template/_head %>
+<% include src/ejs/template/_header %>
+<% var imgPath = "/assets/images/"; %>
+<% var navItem = ["MEN", "WOMAN", "KIDS"]; %>
+<% var slickImg = ["banner1", "banner2", "banner3"]; %>
+<% var brandName = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "HHH", "III", "JJJ", "KKK", "LLL"]; %>
+<main class="contents" id="page_index">
+  <!-- スライドショー -->
+  <div class="p-top-slickContainer">
+    <ul class="p-top-slickList jsc-slick slick-slider">
+      <% for (var i = 0; i < slickImg.length; i++) { %>
+      <li class="p-top-slickList__item slick-slide slick-current slick-active">
+        <!-- li直下のdivタグで要素間の余白調整 -->
+        <div class="p-top-slickList__item__inner">
+          <img src="<%= imgPath %><%= slickImg[i] %>.png" alt="banner" class="p-top-slickList__Item__thumb">
+        </div>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+  <!-- カテゴリー別の商品一覧 -->
+  <div class="p-top-wears">
+    <div class="p-top-wears__inner c-inner">
+      <!-- NEW -->
+      <section class="p-top-wears__new c-block">
+        <h1 class="p-top-wears__new__ttl c-blockHeading__ttl">NEW</h1>
+        <ul class="p-top-wears__newList c-blockList" data-item-list="new">
+        </ul>
+      </section>
+      <!-- MEN -->
+      <% include src/ejs/template/_men %>
+      <!-- WOMAN -->
+      <% include src/ejs/template/_woman %>
+      <!-- KIDS -->
+      <% include src/ejs/template/_kids %>
+      <!-- PICK UP -->
+      <% include src/ejs/template/_pickup %>
+    </div><!-- /.p-top-wears__inner -->
+    <!-- ブランドリスト -->
+    <section class="p-top-brand c-block jsi-elem-pos">
+      <div class="p-top-brand__inner c-inner" data-fadeIn="fadeIn">
+        <h1 class="p-top-brand__ttl c-blockHeading__ttl">BRAND</h1>
+        <ul class="p-top-brandList c-blockList">
+        <% for (var i = 0; i < brandName.length; i++) { %>
+          <li class="p-top-brandList__item">
+            <a href="#"><%= brandName[i] %></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+      <!-- お気に入りアイテム -->
+      <% include src/ejs/template/_favorite %>
+    </div><!-- /.p-top-wears -->
+    <p class="p-top-circle--gift jsc-elem-slide-rotate"><img src="<%= imgPath %>circle_banner.png" alt="クーポン券"></p>
+  </div>
+</main>
+<% include src/ejs/template/_footer %>
+<% include src/ejs/template/_modal %>

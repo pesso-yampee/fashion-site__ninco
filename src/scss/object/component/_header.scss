@@ -1,0 +1,184 @@
+.c-header-logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 110px;
+  height: auto;
+  transform: translateY(-50%);
+  content: '';
+
+  @include mq("u-sp") {
+    width: 70px;
+  }
+}
+
+.c-header-logo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c-header-links {
+  @include mq("u-sp") {
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    position: fixed;
+    top: 40px;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($colorWhite, .95);
+    transition: all .4s;
+  }
+
+  &.is-active {
+    left: 0;
+  }
+}
+
+.c-header-linksMenu {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  color: rgba($colorDarkGray, .7);
+  transform: translateY(-50%);
+  content: '';
+
+  @include mq("u-sp") {
+    top: 40%;
+    left: initial;
+  }
+}
+
+.c-header-linksMenu__item {
+  display: inline-block;
+  font-size: 15px;
+  
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.c-header-links__controls {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  @include mq("u-sp") {
+    right: initial;
+  }
+}
+
+.c-header-links__controls__cart {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.c-header-links__controls__cart--batch {
+  display: block;
+  position: absolute;
+  top: -7px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  background: #ffa500;
+  border-radius: 50%;
+  font-size: 12px;
+  color: $colorWhite;
+  text-align: center;
+  line-height: 20px;
+  content: '';
+}
+
+.c-header-wordSubmit {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 46%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  background: url(#{$bgPath}icon_search.svg) no-repeat center/cover;
+  border: 0;
+  cursor: pointer;
+  
+  @include mq("u-sp") {
+    left: 112px;
+  }
+}
+
+.c-header-txtSearch {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 210px;
+  padding: 8px 10px 8px 40px;
+  border: 1px solid rgba($colorGray, .4);
+  border-radius: 3px;
+  transform: translateY(-50%);
+  transition: .5s;
+  outline: none;
+  content: '';
+
+  @include mq("u-sp") {
+    left: 100px;
+    width: 160px;
+    padding: 7px 5px 7px 40px;
+    font-size: 10px;
+  }
+
+  &:focus {
+    width: 250px;
+    border: 1px solid #000;
+
+    @include mq("u-sp") {
+      width: 180px;
+    }
+  }
+  
+}
+
+
+
+.c-header-menuTrigger {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 30px;
+  height: 20px;
+  transform: translateY(-50%);
+  transition: all .4s;
+  content: '';
+}
+
+.c-header-menuTrigger__line {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $colorBlack;
+  transition: all .4s;
+
+  &:first-child { top: 0; }
+  
+  &:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:last-child { bottom: 0; }
+
+  /* jsで変更される箇所 */
+  &.is-active {
+    &:first-child { transform: translateY(9px) rotate(-315deg); }
+    
+    &:nth-child(2) { opacity: 0; }
+
+    &:last-child { transform: translateY(-9px) rotate(315deg); }
+  }
+}

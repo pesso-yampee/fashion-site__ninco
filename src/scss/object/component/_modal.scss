@@ -1,0 +1,153 @@
+.c-modal {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($colorWhite, .95);
+  transition: .3s;
+  
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.c-modal-inner {
+  position: absolute;
+  width: 600px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq("u-sp") {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.c-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+
+  @include mq("u-sp") {
+    transform: translateY(-20%);
+  }
+}
+
+.c-modal-ttl {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+
+  @include mq("u-sp") {
+    font-size: 18px;
+  }
+}
+
+.c-modalList {
+  overflow: scroll;
+  max-height: 50vh;
+  margin-bottom: 20px;
+}
+
+.c-modalList .c-blockList__item {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-right: 0;
+  // width: calc((100% - (20px * 1)) / 2);
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba($colorGray, .3);
+
+  &:nth-last-child(n+3) {
+    margin-bottom: 20px;
+  }
+
+  @include mq("u-sp") {
+    width: 100%;
+
+    &:nth-last-child(n+2) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.c-modalList .c-blockList__item > a {
+  display: flex;
+}
+
+.c-modalList .c-blockList__item__cap {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.c-pickupList .c-blockList__item__txtList {
+  width: calc(100% - 100px);
+}
+
+.cart-delete {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.c-modal-cartTotal {
+  margin-bottom: 20px;
+  font-size: 25px;
+
+  @include mq("u-sp") {
+    font-size: 20px;
+  }
+}
+
+.c-modal-cartTotal__price {
+  color: $colorRed;
+}
+
+.c-modal-btn--buy {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: $colorRed;
+  color: $colorWhite;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+
+  @include mq("u-sp") {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  &::before {
+    display: block;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(#{$bgPath}icon_cart_white.svg) no-repeat center/cover;
+    content: '';
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}

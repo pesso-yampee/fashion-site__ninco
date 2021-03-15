@@ -1,0 +1,117 @@
+.c-footer-sns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background-color: rgba($colorDarkGray, .95);
+  color: rgba($colorWhite, .9);
+
+  @include mq("u-sp") {
+    padding: 25px 0;
+  }
+}
+
+.c-footer-sns__heading {
+  margin-bottom: 30px;
+  font-size: 33px;
+  font-weight: normal;
+}
+
+.c-footer-snsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq("u-sp") {
+    flex-wrap: wrap;
+  }
+}
+
+.c-footer-snsList__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - (30px * 2) / 3);
+
+  @include mq("u-sp") {
+    width: initial;
+    margin-bottom: 10px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+
+    @include mq("u-sp") {
+      margin-right: 15px;
+    }
+  }
+}
+
+.c-footer-snsList__item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-footer-snsList__item__logo {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  object-fit: cover;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.c-footer-snsList__item__txt {
+  @include mq("u-sp") {
+    font-size: 12px;
+  }
+}
+
+.c-footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: $colorBlack;
+}
+
+.c-footerList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba($colorWhite, .9);
+
+  @include mq("u-sp") {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 320px;
+    width: 100%;
+  }
+}
+
+.c-footerList__item {
+  font-size: 14px;
+  
+  &:not(:last-child) {
+    @include mq("o-sp") {
+      margin-right: 27px;
+    }
+  }
+
+  @include mq("u-sp") {
+    font-size: 10px;
+  }
+}
+
+.c-footer-copyright {
+  color: rgba($colorWhite, .9);
+
+  @include mq("u-sp") {
+    font-size: 10px;
+  }
+}

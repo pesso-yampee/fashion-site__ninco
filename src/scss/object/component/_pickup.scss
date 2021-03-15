@@ -1,0 +1,42 @@
+.c-pickup__ttl {
+  @extend .p-top-wears__new__ttl;
+}
+
+.c-pickupList .c-blockList__item {
+  width: calc((100% - (20px * 1)) / 2);
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba($colorGray, .3);
+
+  &:not(:nth-child(2n)) {
+    @include mq("o-sp") {
+      margin-right: 20px;
+    }
+  }
+
+  &:nth-last-child(n+3) {
+    margin-bottom: 20px;
+  }
+
+  @include mq("u-sp") {
+    width: 100%;
+
+    &:nth-last-child(n+2) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.c-pickupList .c-blockList__item>a {
+  display: flex;
+}
+
+.c-pickupList .c-blockList__item__cap {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.c-pickupList .c-blockList__item__txtList {
+  width: calc(100% - 100px);
+}

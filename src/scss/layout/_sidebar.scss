@@ -1,0 +1,15 @@
+.l-sidebar {
+  float: left;
+  clear: both;
+  width: 200px;
+  height: auto;
+  margin-right: 40px;
+  padding: 20px;
+  border: 1px solid rgba($colorGray, .2);
+  background-color: $sidebarBgColor;
+
+  @include mq("u-sp") {
+    width: auto;
+    margin: 0 0px 40px 0;
+  }
+}

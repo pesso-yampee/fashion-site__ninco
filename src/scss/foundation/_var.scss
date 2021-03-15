@@ -1,0 +1,39 @@
+// breakpoint
+$breakSP: 768;
+$breakPC: 950;
+$breakpoints: (
+  'u-sp': 'print, screen and (max-width: #{$breakSP}px)',
+  'o-sp': 'print, screen and (min-width: #{$breakSP + 1}px)',
+  'sp-pc':
+    'print, screen and (max-width: #{$breakPC}px) and (min-width: #{$breakSP + 1}px)',
+  'o-pc': 'print, screen and (min-width: #{$breakPC + 1}px)',
+) !default;
+@mixin mq($breakpoint) {
+  @media #{inspect(map-get($breakpoints, $breakpoint))} {
+    @content;
+  }
+}
+
+// ie用
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+// PATH
+$bgPath: '../../assets/images/';
+
+// COLOR
+$colorLight: #3cabe0;
+$colorNormal: #2496cd;
+$colorDark: #012c45;
+$colorDarkGray: #222;
+$colorGray: #666;
+$colorLightGray: #F2F2F2;
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorSoftBlack: #333333;
+$colorRed: #e73656;
+$starColor: #FEC108;
+$sidebarBgColor: #fafafa;

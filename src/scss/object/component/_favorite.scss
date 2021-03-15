@@ -1,0 +1,30 @@
+.c-favorite {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.c-favorite__ttl {
+  @extend .p-top-wears__new__ttl;
+}
+
+.c-favoriteList .c-blockList__item {
+  &:nth-last-child(n+6) { margin-bottom: 0; }
+
+  &:nth-child(n+11) { display: block; }
+
+  @include mq("u-sp") {
+    width: autocalc(100% / 3);
+
+    &:nth-last-child(n+3) { margin-bottom: 0; }
+  }
+}
+
+.c-favoriteList .c-blockList__item > a {
+  display: block;
+
+  @include mq("o-sp") { margin: 0 25px; }
+}
+
+.c-favoriteList .c-blockList__item__txtList__item__product {
+  font-size: 12px;
+}

@@ -1,0 +1,9 @@
+.c-inner {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq("u-sp") {
+    width: 95%;
+  }
+}

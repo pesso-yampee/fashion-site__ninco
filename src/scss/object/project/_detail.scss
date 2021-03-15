@@ -1,0 +1,276 @@
+.p-detail {
+  padding-top: 60px;
+
+  @include mq("u-sp") {
+    padding-top: 40px;
+  }
+}
+
+.p-detail-cont {
+  display: flex;
+  justify-content: center;
+  margin: 35px auto 100px;
+  padding: 35px;
+  background-color: #F2F2F2;
+
+  @include mq("u-sp") {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin-top: 0;
+    padding: 20px 20px 5px;
+  }
+}
+
+.p-detail-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-right: 30px;
+
+  @include mq("u-sp") {
+    width: auto;
+    margin-right: 0;
+  }
+}
+
+.p-detail-main__img {
+  margin-bottom: 7px;
+}
+
+.p-detail-main__mouseNote {
+  color: $colorGray;
+  text-align: center;
+
+  @include mq("u-sp") {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+.p-detail-info {
+  width: 100%;
+  font-weight: bold;
+}
+
+.new-label {
+  display: inline-block;
+  padding: 5px 10px;
+  line-height: 1;
+  margin-bottom: 10px;
+  background-color: #f03a47;
+  color: $colorWhite;
+  font-weight: bold;
+}
+
+.p-detail-name {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+
+  @include mq("u-sp") {
+    font-size: 22px;
+  }
+}
+
+.p-detail-brand {
+  margin-bottom: 20px;
+  font-size: 20px;
+
+  @include mq("u-sp") {
+    font-size: 18px;
+  }
+}
+
+.p-detail-size__select {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+  @include mq("u-sp") {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+
+.p-detail-size__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.p-detail-size__list__item {
+  width: calc((100% - (10px * 4)) / 5);
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  background-color: $colorWhite;
+  border: 1px solid rgba($colorGray, .15);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+
+  @include mq("u-sp") {
+    width: initial;
+    margin-right: 8px;
+  }
+  
+  &:not(:nth-child(5n)) {
+    @include mq("o-sp") {
+      margin-right: 10px;
+    }
+  }
+  
+  &.is-active {
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
+
+}
+
+.p-detail-price {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.p-detail-cartBtn,
+.p-detail-favBtn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+
+  @include mq("u-sp") {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  &::before {
+    display: block;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    content: '';
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+}
+
+.p-detail-cartBtn {
+  background-color: $colorNormal;
+  color: $colorWhite;
+  
+  &::before {
+    background: url(#{$bgPath}icon_cart_white.svg) no-repeat center/cover;
+  }
+  &.is-active {
+    background-color: #ccc;
+  }
+}
+
+.p-detail-favBtn {
+  background-color: $colorWhite;
+  color: $colorBlack;
+
+  &::before {
+    background: url(#{$bgPath}icon_heart.svg) no-repeat center/cover;
+  }
+
+  &.is-active {
+    background-color: #ccc;
+  }
+}
+
+.p-detail-explain__trigger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    margin-right: 10px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 17px solid #000;
+    content: '';
+  }
+
+  @include mq("u-sp") {
+    font-size: 17px;
+  }
+
+  &.is-active {
+    &::before {
+      display: block;
+      width: 17px;
+      height: 4px;
+      margin-right: 10px;
+      border: none;
+      background-color: $colorBlack;
+      content: '';
+    }
+  }
+}
+
+.p-detail-explain__txt {
+  display: none;
+  font-weight: normal;
+
+  @include mq("u-sp") {
+    font-size: 14px;
+  }
+}
+
+/* レビュー部分はここから */
+.p-detail-review {
+  opacity: 1;
+  margin-bottom: 100px;
+}
+
+.p-detail-review__ttl {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba($colorGray, .3);
+}
+
+.p-detail-reviewList {
+  display: flex;
+  align-items: center;
+}
+
+.p-detail-reviewList__item {
+  display: inline-block;
+  position: relative;
+  
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  &::before, &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: scale(1.8);
+    color: $colorLightGray;
+    cursor: pointer;
+    content: '★';
+  }
+  
+  &.is-active {
+    &::after {
+      color: $starColor;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// animation-name: ; //keyframes
+// animation-duration: ; //duration
+// animation-timing-function: ; //easing
+// animation-delay: ; //delay
+// animation-iteration-count: ; // 1,3,infinite
+// animation-direction: ; //normal,reverse,alternate,alternate-reverse
+// animation-fill-mode: ; //none,forwards,backwards,both
+// animation-play-state: ; //running,paused (animationを止める)
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

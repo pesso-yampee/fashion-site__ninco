@@ -1,0 +1,13 @@
+.u-hidden { display: none !important; }
+.u-hidden-sp {
+  @include mq(u-sp) {
+    display: none !important;
+  }
+}
+.u-hidden-pc {
+  @include mq(o-sp) {
+    display: none !important;
+  }
+}
+
+.u-mb-10 { margin-bottom: 10px !important; }

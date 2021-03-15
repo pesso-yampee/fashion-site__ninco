@@ -1,0 +1,27 @@
+.c-btn-more {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 7px 20px 7px 10px;
+  background-color: #2997CB;
+  font-size: 12px;
+  color: $colorWhite;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    right: 15px;
+    width: 1px;
+    height: 10px;
+    background-color: $colorWhite;
+    content: '';
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}

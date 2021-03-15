@@ -1,0 +1,12 @@
+.c-flash {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: green;
+  color: $colorWhite;
+  text-align: center;
+  line-height: 50px;
+}

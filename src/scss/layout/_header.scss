@@ -1,0 +1,25 @@
+.l-header {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  padding-top: -60px;
+  background-color: $colorWhite;
+  border-bottom: 1px solid rgba($colorGray, .1);
+
+  @include mq("u-sp") {
+    padding-top: -40px;
+  }
+}
+
+.l-header-inner {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  @include mq("u-sp") {
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+}

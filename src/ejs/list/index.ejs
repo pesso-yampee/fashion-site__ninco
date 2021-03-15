@@ -1,0 +1,74 @@
+<% var title = "鳳凰の間 ECサイト 一覧"; var description = "鳳凰の間 ECサイト 一覧のdescription"; %>
+<% include src/ejs/template/_head %>
+<% include src/ejs/template/_header %>
+<%
+  var imgPath  = "/assets/images/",
+      navItem  = ["MEN", "WOMAN", "KIDS"],
+      category = ["men", "woman", "kids"];
+%>
+<% var price = ["1000", "2000", "3000", "4000", "5000"]; %>
+<% var brand = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "HHH", "III", "JJJ", "KKK", "LLL"]; %>
+<main class="contents" id="page_list">
+  <div class="p-list-cont c-inner">
+    <div class="p-list-searchResults">
+      <aside class="l-sidebar">
+        <!-- カテゴリー -->
+        <section class="c-list-sidebar__inner">
+          <h1 class="c-list-sidebar__ttl jsi-elem-trigger">カテゴリー</h1>
+          <div class="c-list-sidebar__body jsc-elem-slide">
+            <ul class="c-list-sidebarList">
+              <% for (var i = 0; i < navItem.length; i++) { %>
+              <li class="c-list-sidebarList__item">
+                <a href="/list/index.html?category=<%= category[i] %>"><%= navItem[i] %></a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </section>
+        <!-- 価格 -->
+        <section class="c-list-sidebar__inner">
+          <h1 class="c-list-sidebar__ttl jsi-elem-trigger">価格</h1>
+          <div class="c-list-sidebar__body jsc-elem-slide">
+            <form action="" id="price-form">
+              <!-- selectタグでは疑似要素を使えないからlabelタグで囲むんで、こっちで擬似要素をあてる -->
+              <label class="p-list-sidebar__price__cont" for="">
+                <select class="p-list-sidebar__price__select jsi-price-select" name="price">
+                  <option hidden>価格を選択する</option>
+                  <% for (var i = 0; i < price.length; i++) { %>
+                  <option value="<%= price[i] %>">~<%= price[i] %>円</option>
+                  <% } %>
+                </select>
+              </label>
+            </form>
+          </div>
+        </section>
+        <!-- ブランド -->
+        <section class="c-list-sidebar__inner">
+          <h1 class="c-list-sidebar__ttl jsi-elem-trigger">ブランド</h1>
+          <div class="p-list-brand__body c-list-sidebar__body jsc-elem-slide">
+            <ul class="p-list-brandMenu c-list-sidebarList" data-more-list="brand">
+              <% for (var i = 0; i < brand.length; i++) { %>
+              <li class="c-list-sidebarList__item">
+                <a href="/list/index.html?brand=<%= brand[i] %>"><%= brand[i] %></a>
+              </li>
+              <% } %>
+            </ul>
+            <p class="c-btn-more" data-more-btn="brand">もっと見る</p>
+          </div>
+        </section>
+      </aside>
+      <!-- メイン部分 -->
+      <section class="p-list-result c-block">
+        <h1 class="p-list-result__ttl jsc-elem-add"></h1>
+        <ul class="p-list-resultList c-blockList" data-more-list="items">
+        </ul>
+        <p class="c-btn-more" data-more-btn="items">もっと見る</p>
+      </section>
+    </div><!-- /.p-list-searchResults -->
+    <% include src/ejs/template/_pickup %>
+    <% include src/ejs/template/_favorite %>
+  </div><!-- /.p-list-cont c-inner -->
+</main>
+<% include src/ejs/template/_footer %>
+<% include src/ejs/template/_loader %>
+<% include src/ejs/template/_modal %>
