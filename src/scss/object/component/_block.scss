@@ -88,6 +88,10 @@
 .c-blockList__item__txtList__item__product {
   font-size: 18px;
   font-weight: bold;
+
+  @include mq('u-sp') {
+    font-size: 14px;
+  }
 }
 
 .c-blockList__item__txtList__item__detail {
@@ -99,8 +103,16 @@
   padding: 0 3px;
   font-size: 15px;
   color: rgba($colorDarkGray, .8);
+
+  @include mq('u-sp') {
+    font-size: 13px;
+  }
 }
 
 .c-blockList__item__txtList__item__price {
   font-weight: bold;
+
+  @include mq('u-sp') {
+    font-size: 15px;
+  }
 }
