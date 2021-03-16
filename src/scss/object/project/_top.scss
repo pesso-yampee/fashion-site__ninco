@@ -126,8 +126,8 @@
   transition: transform 1.6s;
 
   &.is-show {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeIn 1s linear;
+    // opacity: 1;
+    // transform: translateY(0);
+    animation: fadeIn 1s linear forwards;
   }
 }
